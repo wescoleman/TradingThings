@@ -11,6 +11,11 @@
 *.njsproj
 *.sln
 *.sw?
+*.bash_history
+*.onCreateCommandMarker
+*.postCreateCommandMarker
+*.updateContentCommandMarker
+*.vscode/settings.json 
 
 # VS Code Dev Containers
 .devcontainer/devcontainer.json
