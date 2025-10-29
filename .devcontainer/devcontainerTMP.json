@@ -1,0 +1,27 @@
+{
+  "name": "Trading Things Dev Container",
+  "build": {
+    "dockerfile": "../docker/Dockerfile",
+    "context": "..",
+    "args": {
+      "CONTAINER_USER": "dev"
+    }
+  },
+  "remoteUser": "dev",
+  "workspaceFolder": "/home/dev",
+  "mounts": [
+    "source=${localWorkspaceFolder},target=/home/dev,type=bind,consistency=cached"
+  ],
+  "postCreateCommand": "id -a",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "ms-python.python",
+        "esbenp.prettier-vscode"
+      ],
+      "settings": {
+        "terminal.integrated.defaultProfile.linux": "bash"
+      }
+    }
+  }
+}
